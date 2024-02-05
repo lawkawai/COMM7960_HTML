@@ -1,0 +1,68 @@
+.image1:hover{
+    transform: translate(30px, 30px);
+}
+
+.image2:hover{
+    transform: rotate(45deg);
+}
+
+.image3:hover{
+    transform: scale(2);
+}
+
+.image4:hover{
+    transform: skew(50deg, -15deg);
+    filter: grayscale(100%)
+}
+
+@keyframes translate {
+    0% {transform: translate(30px, -30px);}
+  25%  {transform: translate(60px, -60px)}
+  50%  {transform: translate(90px, -90px);}
+  100% {transform: translate(120px, -120px);}    
+}
+
+@keyframes rotation {
+    0% {transform: rotate(45deg);}
+  25%  {transform: rotate(90deg);}
+  50%  {transform: rotate(135deg);}
+  100% {transform: rotate(180deg);}    
+}
+
+.image1_animation
+{
+    animation-name: translate;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.image2_animation:hover
+{
+    animation-name: rotation;
+    animation-duration: 4s;
+}
+
+.box{
+    height: 300px;
+    width: 400px;
+    background-color: powderblue;
+  }
+
+.ball {
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    border-radius: 50%;         /* Turns a square into a circle   */
+    background-color: #FF5722;  /* Sets color to Orange           */
+    animation-name: bounce;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+@keyframes bounce {
+    0%  { transform: translate(0px,125px);}
+    20% { transform: translate(185px,250px);}
+    50% { transform: translate(350px,125px);}
+    75% { transform: translate(185px, 0px);}
+    100% { transform: translate(0px,125px);}
+}
